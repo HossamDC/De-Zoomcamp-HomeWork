@@ -44,8 +44,7 @@ def main(params):
     
 
     
-    # df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
-    # df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
+
 
     if "green" in url:
         # Convert datetime columns for green taxi data
@@ -124,54 +123,7 @@ if __name__ == '__main__':
 
     main(args)    
     
-    # In[30]:
-    
-    
-    # get_ipython().system('wget taxi-zone-lookup.csv')
-    
-    
-    # # In[33]:
-    
-    
-    # df_zones = pd.read_csv('taxi_zone_lookup.csv')
-    
-    
-    # # In[34]:
-    
-    
-    # df_zones.head()
-    
-    
-    # # In[36]:
-    
-    
-    # df_zones.to_sql(name='zones', con=engine, if_exists='replace')
-    
-    
-    # # In[37]:
-    
-    
-    # query = """
-    # SELECT *
-    # FROM pg_catalog.pg_tables
-    # WHERE schemaname != 'pg_catalog' AND 
-    #     schemaname != 'information_schema';
-    # """
-    
-    # pd.read_sql(query, con=engine)
-    
-    
-    # # In[40]:
-    
-    
-    # query = """
-    # --SELECT * FROM yellow_taxi_data	 LIMIT 10
-    
-    # select max(tpep_pickup_datetime) ,min(tpep_pickup_datetime) ,max(total_amount) from yellow_taxi_data
-    # """
-    
-    # pd.read_sql(query, con=engine)
-
+   
 
 # In[ ]:
 
