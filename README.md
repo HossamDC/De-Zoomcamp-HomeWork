@@ -82,6 +82,17 @@ wget https://github.com/DataTalksClub/nyc-tlc-data/releases/download/misc/taxi_z
 ```
 
 Download this data and put it into Postgres.
+answer:
+docker run -it \
+  --network=week1_taxi-network \
+  taxi_ingest:v001 \
+    --user=root \
+    --password=root \
+    --host=pgdatabase \
+    --port=5432 \
+    --db=ny_taxi \
+    --table_name=green_taxi_trips \
+    --url=${URL}
 
 You can use the code from the course. It's up to you whether
 you want to use Jupyter or a python script.
